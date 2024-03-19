@@ -1,0 +1,12 @@
+{
+    "name": "eliashaeussler/renovate-repro-github-actions",
+    "description": "Reproduction repository for missing updates of GitHub Actions",
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.42"
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    }
+}

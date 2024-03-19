@@ -1,0 +1,23 @@
+name: CGL
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cgl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          tools: composer:v2
+          coverage: none
+      - name: Install Composer dependencies
+        # This dependency is outdated and should be updated to v3
+        uses: ramsey/composer-install@v2
